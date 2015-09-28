@@ -120,6 +120,14 @@ Sub ButtonDrawPolygon_Click(Sender)
     DrawPolygon(DummyVar)
 End Sub
 
+Sub ButtonDrawCoil_Click(Sender)
+    ' Close main form
+    FormMainScript.Close
+
+    ' Call DrawPolygon script
+    DrawCoil(DummyVar)
+End Sub
+
 Sub ButtonCurrentCalculator_Click(Sender)
 
     ' Hide main form
@@ -201,8 +209,8 @@ Sub ButtonComponentParameterStamperClick(Sender)
 End Sub
 
 Sub ButtonSwapSchematicDesignatorsClick(Sender)
-	FormMainScript.Hide 
+    FormMainScript.Hide 
     FormMainScript.Close
 
-	Call SwapSchematicDesignators(dummyVar)
+    Call SwapSchematicDesignators(dummyVar)
 End Sub

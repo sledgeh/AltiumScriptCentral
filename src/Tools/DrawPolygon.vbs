@@ -99,6 +99,14 @@ Sub ButtonDrawOnPcbClick(Sender)
      RotationDeg = StrToFloat(EditRotationDeg.Text)
 
      ' Line thickness
+     ' check locale
+     if( CStr(0.1) = "0,1" ) then
+         EditLineThicknessMm.Text = (Replace(EditLineThicknessMm.Text,".",","))
+     end if
+     If Not IsPerfectlyNumeric(EditLineThicknessMm.Text) Then
+         ShowMessage("ERROR: 'Line Thickness (mm)' input must be a valid number.")
+         Exit Sub
+     End If
      If Not IsPerfectlyNumeric(EditLineThicknessMm.Text) Then
          ShowMessage("ERROR: 'Line Thickness (mm)' input must be a valid number.")
          Exit Sub

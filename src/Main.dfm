@@ -13,13 +13,14 @@ object FormMainScript: TFormMainScript
   OldCreateOrder = False
   OnCreate = FormMain_Create
   PixelsPerInch = 96
-  TextHeight = 13
-  object Label2: TLabel
-    Left = 730
+  TextHeight = 13     
+  
+  object Label1: TLabel
+    Left = 362
     Top = 20
-    Width = 159
+    Width = 261
     Height = 39
-    Caption = 'PCB Tools'
+    Caption = 'Schematic Tools'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -32
@@ -27,12 +28,12 @@ object FormMainScript: TFormMainScript
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object Label1: TLabel
-    Left = 362
+  object Label2: TLabel
+    Left = 730
     Top = 20
-    Width = 261
+    Width = 159
     Height = 39
-    Caption = 'Schematic Tools'
+    Caption = 'PCB Tools'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -32
@@ -187,6 +188,15 @@ object FormMainScript: TFormMainScript
     Caption = 'Draw Polygon'
     TabOrder = 9
     OnClick = ButtonDrawPolygon_Click
+  end
+  object ButtonDrawCoil: TButton
+    Left = 708
+    Top = 340
+    Width = 204
+    Height = 25
+    Caption = 'Draw Coil'
+    TabOrder = 100
+    OnClick = ButtonDrawCoil_Click
   end
   object ButtonCurrentCalculator: TButton
     Left = 708
